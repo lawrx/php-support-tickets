@@ -1,0 +1,13 @@
+# Reflection
+
+**1. Why does searching use GET while creating a ticket uses POST?**
+Searching uses GET because it doesn't change any data on the server, and putting the parameters in the URL makes it easy to bookmark or share a specific search. Creating a ticket uses POST because it actually adds new data and updates the JSON file, which shouldn't happen just by loading or refreshing a page link.
+
+**2. Why is server-side validation still necessary if the HTML form performs validation?**
+HTML validation is great for catching simple mistakes on the frontend, but it's really easy for users to bypass using browser tools or scripts like cURL. Server-side validation is necessary to make sure bad or malicious data never gets saved into the backend files.
+
+**3. What happens to an uploaded file before PHP moves it to the final upload directory?**
+When a file is uploaded, PHP automatically saves it to a temporary directory on the server with a random temporary name. If the script finishes running without moving the file using `move_uploaded_file()`, PHP deletes it from the temp folder automatically.
+
+**4. Where could you use a similar request-processing pattern in your capstone project?**
+I could use this same pattern for handling user inputs and form submissions, like a login page, profile updates, or creating new database records where I need to validate data on the backend before saving it.
